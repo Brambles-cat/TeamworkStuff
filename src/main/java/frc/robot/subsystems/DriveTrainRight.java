@@ -12,8 +12,8 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class DriveTrainRight extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
-  TalonFX front = new TalonFX(0);
-  TalonFX back = new TalonFX(0);
+  TalonFX front = new TalonFX(3);
+  TalonFX back = new TalonFX(2);
   
   public DriveTrainRight() {}
 

@@ -4,8 +4,8 @@ import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class drivetrainLeft extends SubsystemBase {
-  TalonFX frontLeft = new TalonFX(0);
-  TalonFX backLeft = new TalonFX(0);
+  TalonFX frontLeft = new TalonFX(4);
+  TalonFX backLeft = new TalonFX(1);
   /** Creates a new ExampleSubsystem. */
   public drivetrainLeft() {}
 

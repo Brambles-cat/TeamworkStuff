@@ -48,11 +48,10 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    new JoystickButton(stickjoy, 11).whileTrue(new DriveCommand(DriveSubDub, 0.8));
-    new JoystickButton(stickjoy, 10).whileTrue(new DriveCommand(DriveSubDub, -0.8));
-    new JoystickButton(stickjoy, 3).whileTrue(new leftDrivetrain(Lefty, .8 ));
-    new JoystickButton(stickjoy, 4).whileTrue(new leftDrivetrain(Lefty, -.8 ));
-
+    new JoystickButton(stickjoy, 10).whileTrue(new DriveCommand(DriveSubDub, 0.45));
+    new JoystickButton(stickjoy, 11).whileTrue(new DriveCommand(DriveSubDub, -0.3));
+    new JoystickButton(stickjoy, 6).whileTrue(new leftDrivetrain(Lefty, .3));
+    new JoystickButton(stickjoy, 7).whileTrue(new leftDrivetrain(Lefty, -.45));
   }
 
   /**
