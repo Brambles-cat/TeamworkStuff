@@ -8,8 +8,10 @@ import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
 import frc.robot.commands.DriveCommand;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.leftDrivetrain;
 import frc.robot.subsystems.DriveTrainRight;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.drivetrainLeft;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -26,7 +28,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   private final DriveTrainRight DriveSubDub = new DriveTrainRight();
-
+  drivetrainLeft Lefty = new drivetrainLeft();
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final Joystick stickjoy = new Joystick(0);
 
@@ -47,8 +49,10 @@ public class RobotContainer {
    */
   private void configureBindings() {
     new JoystickButton(stickjoy, 11).whileTrue(new DriveCommand(DriveSubDub, 0.8));
-    
     new JoystickButton(stickjoy, 10).whileTrue(new DriveCommand(DriveSubDub, -0.8));
+    new JoystickButton(stickjoy, 3).whileTrue(new leftDrivetrain(Lefty, .8 ));
+    new JoystickButton(stickjoy, 4).whileTrue(new leftDrivetrain(Lefty, -.8 ));
+
   }
 
   /**
